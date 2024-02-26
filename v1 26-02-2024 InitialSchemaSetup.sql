@@ -1,5 +1,7 @@
+--Initial setup
 CREATE TABLE Products(
-	Id int,
+	Id int identity(1,1),
 	Name varchar(255),
-	Price decimal
+	Price decimal,
+	PRIMARY KEY(Id)
 )
