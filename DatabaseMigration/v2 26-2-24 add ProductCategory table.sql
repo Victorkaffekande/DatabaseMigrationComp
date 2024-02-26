@@ -5,9 +5,13 @@ category_id INT NOT NULL PRIMARY KEY,
 [name] varchar(255) NOT NULL
 );
 
-ALTER TABLE Products
+SELECT *
+INTO ProductsV2
+FROM Products
+
+ALTER TABLE ProductsV2
 ADD category_id INT 
 
-ALTER TABLE Products
+ALTER TABLE ProductsV2
 ADD CONSTRAINT FK_ProductCategory
 FOREIGN KEY (category_id) REFERENCES ProductCategory(category_id);
